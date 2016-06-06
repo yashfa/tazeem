@@ -1,0 +1,106 @@
+﻿@using legalForum.Models()
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="~/Content/images/favicon.ico">
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/jquery-migrate-1.1.1.js"></script>
+    <script src="~/Content/js/superfish.js"></script>
+    <script src="~/Content/js/jquery.equalheights.js"></script>
+    <script src="~/Content/js/jquery.easing.1.3.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><a href="~/Home/index"><img src="~/Content/images/logo.png" alt=""></a> </h1>
+                <div class="clear"></div>
+                <div class="menu_block">
+                    <h2>Contact</h2>
+                    <nav>
+                        <ul class="sf-menu">
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li><a href="~/Home/clients">My Profile</a></li>
+                            <li><a href="~/Home/clientLogOut">log out</a></li>
+
+
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container_12">
+
+            <div class="grid_7" style="text-align:center;">
+
+
+
+                <form action="~/Home/addcl" method="Post">
+                    <h3>
+                        <h2>Send e-mail to @Session["lawyer_id"]:</h2>
+
+                        <form action="../Home/sent" method="post" enctype="text/plain">
+                            Name:<br>
+                            <input type="text" name="name" value="name"><br>
+                            E-mail:<br>
+                            <input type="text" name="mail" value="mail"><br>
+                            Comment:<br>
+                            <input type="text" name="comment" value="your comments" size="80"><br><br>
+                            <input type="submit" value="Send">
+                            <input type="reset" value="Reset">
+                        </form>
+                    </h3>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container_12">
+            <div class="grid_12">
+                <h4>contact Us</h4>
+                <p>Tazeem Haider &copy; 2016 | | Design by: Design by: <a href="http://intandif.com/portfolio/" class="" target="_blank">Tazeem Haider </a></p>
+                <address>
+                    Chamber no. 119,High Courts,Lahore Pakistan<br>
+                    TELEPHONE: +92 12345678
+                    <div>
+                        <span>Follow us :</span>
+                        <a href="https://www.facebook.com/tazeem.haider" class="facebook" target="_blank">facebook</a>
+                    </div>
+                </address>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+</body>
+</html>

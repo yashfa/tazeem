@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "cldelete";
+    
+}
+
+@using legalForum.Models;
+
+@*============Middle Div about Delete clients *@
+
+
+<div class="col-sm-5" style="margin:0px; padding:0px">
+
+    <div>
+        <h3 style="font-family:Georgia; margin-left:8px; color:#a94442"><b>Delete client</b></h3>
+    </div>
+
+    <div class="panel panel-danger" style="margin: 80px 0px 0px 80px">
+
+        <table class="table">
+
+            <tr style="background-color:#f2dede;">
+                <td style="text-align:center; color:#a94442"><b>client ID</b></td>
+                <td style="text-align:center; color:#a94442"><b>client Name</b></td>
+                <td style="text-align:center; color:#a94442"><b>client age</b></td>
+                
+            </tr>
+
+            @foreach (client c in Model)
+            {
+                <tr>
+                    <td style="text-align:center">@c.client_id</td>
+                    <td style="text-align:center">@c.client_name</td>
+                    <td style="text-align:center">@c.client_age</td>
+                    <td style="text-align:center">
+                        <form action="/Admin/cldeleteNow/@c.client_id" onsubmit="return agree()">
+                            <input type="submit" value="Delete" style="border:none; border-radius:3px; color:white;font-weight:600" class="btn-warning" />
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>
+
+<script>
+
+    function agree() {
+        var x = confirm("Are you sure?");
+        if (x == true)
+            return true;
+        else
+            return false;
+    }
+
+</script>

@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "detail";
+}
+@model List<legalForum.Models.hearing>
+
+@*============Middle Div about View All Student Results *@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>case details</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="~/Content/images/favicon.ico">
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/jquery-migrate-1.1.1.js"></script>
+    <script src="~/Content/js/superfish.js"></script>
+    <script src="~/Content/js/jquery.equalheights.js"></script>
+    <script src="~/Content/js/jquery.easing.1.3.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><a href="~/Home/index"><img src="~/Content/images/logo.png" alt=""></a> </h1>
+                <div class="clear"></div>
+                <div class="menu_block">
+                    
+                    <nav>
+                        <ul class="sf-menu">
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            <li> </li>
+                            
+                            <li><a href="~/Home/clientLogOut">log out</a></li>
+                            <li><a href="~/Home/clients">My Profile</a></li>
+
+
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="col-sm-5" style="margin:0px; padding:0px">
+
+            <div>
+                <h3 style="font-family:Georgia; margin-left:8px; color:#a94442"><b>Case Details</b></h3>
+            </div>
+
+            <div class="panel panel-danger" style="margin: 80px 0px 0px 80px">
+
+                <table class="table">
+
+                    <tr style="background-color:#f2dede">
+                        <td style="text-align:center; color:#a94442"><b>hearing dates</b></td>
+                        <td style="text-align:center; color:#a94442"><b>Description</b></td>
+                       
+
+                    </tr>
+
+                    @foreach (var c in Model)
+                    {
+                        if (c.case_id == 1)
+                        {
+                            <tr>
+                                <td style="text-align:center">@c.hearing_date</td>
+                                <td style="text-align:center">@c.description</td>
+                     
+
+                            </tr>
+
+
+                        }
+                    }
+
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container_12">
+            <div class="grid_12">
+                <h4>contact Us</h4>
+                <p>Tazeem Haider &copy; 2016 | | Design by: Design by: <a href="http://intandif.com/portfolio/" class="" target="_blank">Tazeem Haider </a></p>
+                <address>
+                    Chamber no. 119,High Courts,Lahore Pakistan<br>
+                    TELEPHONE: +92 12345678
+                    <div>
+                        <span>Follow us :</span>
+                        <a href="https://www.facebook.com/tazeem.haider" class="facebook" target="_blank">facebook</a>
+                    </div>
+                </address>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+</body>
+</html>
+
